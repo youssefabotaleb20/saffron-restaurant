@@ -32,7 +32,7 @@ export default function Reservation() {
   }
 
   const inputClass =
-    'bg-white/[0.04] border border-[#C9A84C30] text-cream px-4 py-3 font-dm text-sm outline-none focus:border-[#C9A84C] transition-colors w-full'
+    'bg-white/[0.04] border border-[#C9A84C30] text-cream px-4 py-3 font-dm text-sm outline-none focus:border-[#C9A84C] transition-colors w-full max-w-full'
   const labelClass = 'block text-[0.75rem] tracking-[0.15em] uppercase text-[#8A7A60] mb-1.5 font-dm'
 
   return (
@@ -53,21 +53,21 @@ export default function Reservation() {
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
+                <div className="min-w-0">
                   <label className={labelClass}>First Name</label>
                   <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="Ahmed" className={inputClass} required />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label className={labelClass}>Last Name</label>
                   <input name="lastName" value={form.lastName} onChange={handleChange} placeholder="Hassan" className={inputClass} required />
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
+                <div className="min-w-0">
                   <label className={labelClass}>Date</label>
-                  <input type="date" name="date" value={form.date} onChange={handleChange} className={inputClass} required />
+                  <input type="date" name="date" value={form.date} onChange={handleChange} className={inputClass + ' appearance-none'} required />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label className={labelClass}>Time</label>
                   <select name="time" value={form.time} onChange={handleChange} className={inputClass + ' cursor-pointer'} style={{ background: 'rgba(255,255,255,0.04)' }}>
                     {['7:00 PM','7:30 PM','8:00 PM','8:30 PM','9:00 PM','9:30 PM'].map(t => (
@@ -77,7 +77,7 @@ export default function Reservation() {
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
+                <div className="min-w-0">
                   <label className={labelClass}>Guests</label>
                   <select name="guests" value={form.guests} onChange={handleChange} className={inputClass + ' cursor-pointer'} style={{ background: 'rgba(255,255,255,0.04)' }}>
                     {['1 Person','2 People','3-4 People','5-6 People','7+ People'].map(g => (
@@ -85,7 +85,7 @@ export default function Reservation() {
                     ))}
                   </select>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <label className={labelClass}>Phone</label>
                   <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+20 10 0000 0000" className={inputClass} />
                 </div>

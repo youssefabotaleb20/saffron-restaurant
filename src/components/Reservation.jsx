@@ -52,7 +52,7 @@ export default function Reservation() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>First Name</label>
                   <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="Ahmed" className={inputClass} required />
@@ -62,7 +62,7 @@ export default function Reservation() {
                   <input name="lastName" value={form.lastName} onChange={handleChange} placeholder="Hassan" className={inputClass} required />
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>Date</label>
                   <input type="date" name="date" value={form.date} onChange={handleChange} className={inputClass} required />
@@ -76,7 +76,7 @@ export default function Reservation() {
                   </select>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className={labelClass}>Guests</label>
                   <select name="guests" value={form.guests} onChange={handleChange} className={inputClass + ' cursor-pointer'} style={{ background: 'rgba(255,255,255,0.04)' }}>

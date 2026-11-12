@@ -3,6 +3,9 @@
 A luxury fine-dining restaurant website built with **React + Vite + Tailwind CSS**,
 with a PHP backend for reservation handling.
 
+**Live demo:** https://youssefabotaleb20.github.io/saffron-restaurant/ · Part of [Youssef Abotaleb's portfolio](https://youssefabotaleb20.github.io/Portfolio/)
+
+
 ## Stack
 - **Frontend:** React 18, Vite 5, Tailwind CSS 3, Framer Motion
 - **Backend:** PHP 8+ (reservation API)

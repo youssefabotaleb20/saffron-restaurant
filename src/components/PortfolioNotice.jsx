@@ -63,7 +63,7 @@ export default function PortfolioNotice() {
               Explore the Demo
             </button>
             <a
-              href="https://linktr.ee/YoussefAbotaleb"
+              href="https://youssefabotaleb20.github.io/Portfolio/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center bg-transparent border border-[#C9A84C50] text-[#C9A84C] py-3.5 text-[0.78rem] tracking-[0.15em] uppercase font-dm no-underline hover:border-[#C9A84C] hover:bg-[#C9A84C10] transition-all duration-300"
@@ -77,7 +77,7 @@ export default function PortfolioNotice() {
             <p className="text-[0.7rem] text-[#8A7A60]/60 font-dm tracking-wide text-center">
               Designed & developed by{' '}
               <a
-                href="https://linktr.ee/YoussefAbotaleb"
+                href="https://youssefabotaleb20.github.io/Portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#C9A84C]/70 hover:text-[#C9A84C] transition-colors no-underline"

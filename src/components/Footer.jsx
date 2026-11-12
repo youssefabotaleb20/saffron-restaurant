@@ -1,8 +1,8 @@
 export default function Footer() {
   const columns = [
-    { title: 'Explore', links: ['Menu', 'Wine List', 'Events', 'Gallery'] },
-    { title: 'Visit',   links: ['Directions', 'Reservations', 'Private Dining', 'Gift Cards'] },
-    { title: 'Connect', links: ['Instagram', 'Facebook', 'TripAdvisor', 'Contact Us'] },
+    { title: 'Explore', links: [['Menu', '#menu'], ['Our Story', '#about'], ['Gallery', '#gallery']] },
+    { title: 'Visit',   links: [['Reservations', '#reserve'], ['Private Dining', '#reserve'], ['Back to top', '#top']] },
+    { title: 'Credits', links: [['Built by Youssef Abotaleb ↗', 'https://youssefabotaleb20.github.io/Portfolio/'], ['Photos: Unsplash ↗', 'https://unsplash.com']] },
   ]
 
   return (
@@ -20,9 +20,9 @@ export default function Footer() {
           <div key={col.title}>
             <h4 className="text-[0.72rem] tracking-[0.2em] uppercase text-[#C9A84C] mb-5 font-dm">{col.title}</h4>
             <ul className="list-none flex flex-col gap-3">
-              {col.links.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-[#8A7A60] text-sm font-dm hover:text-cream transition-colors no-underline">{link}</a>
+              {col.links.map(([label, href]) => (
+                <li key={label}>
+                  <a href={href} {...(href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="text-[#8A7A60] text-sm font-dm hover:text-cream transition-colors no-underline">{label}</a>
                 </li>
               ))}
             </ul>
@@ -32,7 +32,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#C9A84C15] flex flex-col md:flex-row justify-between items-center gap-3">
         <span className="text-[#8A7A60] text-[0.78rem] font-dm">© 2025 Saffron Restaurant. All rights reserved.</span>
-        <span className="text-[#8A7A60] text-[0.78rem] font-dm">Privacy Policy · Terms</span>
+        <span className="text-[#8A7A60] text-[0.78rem] font-dm">A portfolio demo, not a real restaurant</span>
       </div>
     </footer>
   )

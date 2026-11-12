@@ -9,7 +9,7 @@ import PortfolioNotice from './components/PortfolioNotice'
 
 export default function App() {
   return (
-    <div className="bg-[#0A0705] text-cream min-h-screen">
+    <div id="top" className="bg-[#0A0705] text-cream min-h-screen">
       <PortfolioNotice />
       <Navbar />
       <Hero />
